@@ -1,4 +1,4 @@
-# Code will test Airflow connection with Snowflake
+# Code will test Airflow connection with Snowflake save this python script as test_snowflake.py
 
 from airflow.providers.snowflake.hooks.snowflake import SnowflakeHook
 
