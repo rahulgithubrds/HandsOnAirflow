@@ -6,8 +6,8 @@ Setup:
 3. Snowflake - Free Trail Account
 
 Snowflake Config: 
-1. Grant All Privillages (in advance) to the Role and Databas, Schema, Tables in Snowflake
-e.g.
+1. Grant access in snowflake:
+   
 -- Grant ability to use roles
 GRANT ROLE ACCOUNTADMIN TO USER <your_snowflake_user>;
 
