@@ -22,6 +22,9 @@ Snowflake Setup & Configuration:
    -- Grant warehouse privileges (e.g. COMPUTE_WH)
    GRANT USAGE ON WAREHOUSE COMPUTE_WH TO ROLE ACCOUNTADMIN;
 
+Note: Kindly note, make sure that Snowflake Warehouse is Started/On. It should naot be Stopped/Pasued state.
+
+
 Installation (All the following steps will be run in Ubuntu WSL Terminal 1): 
 (Bash)
 1. Install python, pip
