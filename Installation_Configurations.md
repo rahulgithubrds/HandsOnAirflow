@@ -22,7 +22,7 @@ Snowflake Setup & Configuration:
    -- Grant warehouse privileges (e.g. COMPUTE_WH)
    GRANT USAGE ON WAREHOUSE COMPUTE_WH TO ROLE ACCOUNTADMIN;
 
-Installation: 
+Installation (All the following steps will be run in Ubuntu WSL Terminal 1): 
 (Bash)
 1. Install python, pip
 2. Create a folder in HOME folder (~) of the Ubuntu User (e.g. airflow)
@@ -36,5 +36,5 @@ Installation:
    - Otherwise, please refer Airflow Documentation to Create User for Airflow.
 8. Provide appropriate access, modify, execute permission to bash files and programming files (e.g. chmod 700 abc.py)
 
-Run & Test:
+Run & Test (All following coding will be done in Ubuntu WSL Terminal 2):
 - Follow the code in repository in the sequence of file names
