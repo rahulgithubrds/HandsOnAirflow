@@ -27,9 +27,10 @@ Installation:
 1. Install python, pip
 2. Create a folder in HOME folder (~) of the Ubuntu User (e.g. airflow)
 3. export AIRFLOW_HOME=~/airflow
-4. pip install apache-airflow
-5. airflow db migrate # use migrate for higher version of airflow (otherwise use airflow db init) 
-6. airflow standalone ( this will start webserver and scheduler)
+4. Create 'dags' folder in '~/airflow' (~/airflow/dags), place your DAG Files inside this folder 
+5. pip install apache-airflow
+6. airflow db migrate # use migrate for higher version of airflow (otherwise use airflow db init) 
+7. airflow standalone ( this will start webserver and scheduler)
    - Airflow User Credentilas will be created automatically in stand alone mode
    - Note down the passwrod for default Airflow Useer 'admin' (Use these credential to be used to Login into Airflow UI)
    - Otherwise, please refer Airflow Documentation to Create User for Airflow.
