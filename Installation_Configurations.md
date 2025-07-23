@@ -1,28 +1,29 @@
-Setup:
+Environment used in this code example:
 1. Snowflake - Free Trail Account
 2. Airflow Version 3.0.2
 3. Operating System Ubuntu 20.04 LTS (WSL).
 4. Check Airflow UI 
 
-Snowflake Setup and Configuration: 
+Snowflake Setup & Configuration: 
 1. Create Snowflake Trial Account
 2. Create DB, Schemas
 3. Grant access in snowflake:
--- Grant ability to use roles (e.g. ACCOUNTADMIN)
-GRANT ROLE ACCOUNTADMIN TO USER <your_snowflake_user>;
+   
+   -- Grant ability to use roles (e.g. ACCOUNTADMIN)
+   GRANT ROLE ACCOUNTADMIN TO USER <your_snowflake_user>;
 
--- Grant database privileges
-GRANT USAGE ON DATABASE <snowfalek_db> TO ROLE ACCOUNTADMIN;
-GRANT CREATE SCHEMA ON DATABASE <snowfalek_db> TO ROLE ACCOUNTADMIN;
-GRANT USAGE ON SCHEMA <snowfalek_db>.<schema_name> TO ROLE ACCOUNTADMIN;
-GRANT CREATE TABLE ON SCHEMA <snowfalek_db>.<schema_name> TO ROLE ACCOUNTADMIN;
-GRANT INSERT, SELECT ON ALL TABLES IN SCHEMA <snowfalek_db>.<schema_name> TO ROLE ACCOUNTADMIN;
+   -- Grant database privileges
+   GRANT USAGE ON DATABASE <snowfalek_db> TO ROLE ACCOUNTADMIN;
+   GRANT CREATE SCHEMA ON DATABASE <snowfalek_db> TO ROLE ACCOUNTADMIN;
+   GRANT USAGE ON SCHEMA <snowfalek_db>.<schema_name> TO ROLE ACCOUNTADMIN;
+   GRANT CREATE TABLE ON SCHEMA <snowfalek_db>.<schema_name> TO ROLE ACCOUNTADMIN;
+   GRANT INSERT, SELECT ON ALL TABLES IN SCHEMA <snowfalek_db>.<schema_name> TO ROLE ACCOUNTADMIN;
 
--- Grant warehouse privileges (e.g. COMPUTE_WH)
-GRANT USAGE ON WAREHOUSE COMPUTE_WH TO ROLE ACCOUNTADMIN;
+   -- Grant warehouse privileges (e.g. COMPUTE_WH)
+   GRANT USAGE ON WAREHOUSE COMPUTE_WH TO ROLE ACCOUNTADMIN;
 
 Installation: 
-# Bash
+(Bash)
 1. Install python, pip
 2. Create a folder in HOME folder (~) of the Ubuntu User (e.g. airflow)
 3. export AIRFLOW_HOME=~/airflow
@@ -34,4 +35,4 @@ Installation:
    - Otherwise, please refer Airflow Documentation to Create User for Airflow.
 
 Run & Test:
-- Follow the code in repository
+- Follow the code in repository in the sequence of file names
