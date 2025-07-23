@@ -83,4 +83,7 @@ with DAG(
     )
 
     # Dependencies with warehouse activation first
-    start >> activate_warehouse >> test_connection >> create_table >> insert_data >> query_data >> end
+    # start >> activate_warehouse >> test_connection >> create_table >> insert_data >> query_data >> end
+
+    #  warehouse activation step is skipped below
+    start >> test_connection >> create_table >> insert_data >> query_data >> end
