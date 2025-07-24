@@ -38,7 +38,7 @@ Installation (All the following steps will be run in Ubuntu WSL Terminal 1):
    - Note down the passwrod for default Airflow Useer 'admin' (Use these credential to be used to Login into Airflow UI)
    - Otherwise, please refer Airflow Documentation to Create User for Airflow.
 8. Provide appropriate access, modify, execute permission to bash files and programming files (e.g. chmod 700 abc.py)
-9. pip install apache-airflow-providers-snowflake # (package needed airflow to connect to snowflake)
-
+   
 Run & Test (All following coding will be done in Ubuntu WSL Terminal 2):
+- pip install apache-airflow-providers-snowflake # (package needed airflow to connect to snowflake)
 - Follow the code in repository in the sequence of file names
