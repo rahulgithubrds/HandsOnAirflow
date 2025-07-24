@@ -8,17 +8,17 @@ from airflow.operators.empty import EmptyOperator
 
 default_args = {
     'owner': 'airflow',
-    'start_date': datetime(2025, 7, 21),
-    'retries': 3,
-    'retry_delay': timedelta(minutes=2),
+    'start_date': datetime(2025, 7, 24),
+    'retries': 2,
+    'retry_delay': timedelta(minutes=1),
     'retry_exponential_backoff': True,
-    'max_retry_delay': timedelta(minutes=10),
+    'max_retry_delay': timedelta(minutes=2),
     'email_on_failure': True,
 }
 
 with DAG(
     "snowflake_simple_fixed",
-    start_date=datetime(2025, 7, 21),
+    start_date=datetime(2025, 7, 24),
     schedule=None,
     catchup=False,
     default_args=default_args,
@@ -57,8 +57,8 @@ with DAG(
         );
         COMMIT;
         """,
-        retries=5,
-        retry_delay=timedelta(minutes=3)
+        retries=2,
+        retry_delay=timedelta(minutes=0.5)
     )
 
     # 4. Insert data
